@@ -471,7 +471,7 @@ rgba(59,130,246,.18),
 transparent 70%
 );
 filter:blur(30px);
-animation:orbMove 12s infinite alternate;
+animation:orbMove 8s infinite alternate;
 z-index:-1;
 }
 
