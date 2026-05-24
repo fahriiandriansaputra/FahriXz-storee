@@ -1187,24 +1187,6 @@ background-position:400%;
 
 }
 
-/* =========================
-MOUSE GLOW
-========================= */
-
-.cursor-glow{
-position:fixed;
-width:250px;
-height:250px;
-border-radius:50%;
-background:radial-gradient(
-circle,
-rgba(37,99,235,.25),
-transparent 70%
-);
-pointer-events:none;
-transform:translate(-50%,-50%);
-z-index:0;
-}
 
 /* =========================
 NEON ORB
