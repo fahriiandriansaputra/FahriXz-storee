@@ -1,14 +1,4 @@
-/* =========================================
-WELCOME POPUP
-========================================= */
 
-function closeWelcome(){
-
-document.getElementById(
-'welcomePopup'
-).style.display='none';
-
-}
 
 
 <script type="module">
