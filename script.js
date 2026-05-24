@@ -648,18 +648,6 @@ el.classList.add('active');
 });
 
 /* =========================
-CURSOR GLOW
-========================= */
-
-const glow =
-document.querySelector('.cursor-glow');
-
-document.addEventListener('mousemove',e=>{
-
-glow.style.left=e.clientX+'px';
-glow.style.top=e.clientY+'px';
-
-});
 
 /* =========================
 CHAT BUBBLE
@@ -1210,6 +1198,131 @@ wish.style.display='none';
 
 }
 
+/* =========================
+LIGHT PARTICLES
+========================= */
+
+const canvas =
+document.getElementById('particleCanvas');
+
+if(canvas){
+
+const ctx =
+canvas.getContext('2d');
+
+canvas.width =
+window.innerWidth;
+
+canvas.height =
+window.innerHeight;
+
+const particles=[];
+
+/* TOTAL */
+
+const totalParticles =
+window.innerWidth < 768
+? 10
+: 20;
+
+/* CREATE */
+
+for(let i=0;i<totalParticles;i++){
+
+particles.push({
+
+x:Math.random()*canvas.width,
+y:Math.random()*canvas.height,
+size:Math.random()*2+1,
+speedX:(Math.random()-.5)*0.3,
+speedY:(Math.random()-.5)*0.3
+
+});
+
+}
+
+/* ANIMATE */
+
+function animateParticles(){
+
+ctx.clearRect(
+0,
+0,
+canvas.width,
+canvas.height
+);
+
+particles.forEach(p=>{
+
+ctx.beginPath();
+
+ctx.arc(
+p.x,
+p.y,
+p.size,
+0,
+Math.PI*2
+);
+
+ctx.fillStyle=
+'rgba(37,99,235,.15)';
+
+ctx.fill();
+
+p.x += p.speedX;
+p.y += p.speedY;
+
+if(
+p.x < 0 ||
+p.x > canvas.width
+){
+
+p.speedX *= -1;
+
+}
+
+if(
+p.y < 0 ||
+p.y > canvas.height
+){
+
+p.speedY *= -1;
+
+}
+
+});
+
+/* FPS LIMIT */
+
+setTimeout(()=>{
+
+requestAnimationFrame(
+animateParticles
+);
+
+},35);
+
+}
+
+animateParticles();
+
+/* RESIZE */
+
+window.addEventListener(
+'resize',
+()=>{
+
+canvas.width =
+window.innerWidth;
+
+canvas.height =
+window.innerHeight;
+
+}
+);
+
+ }
+
 /* SOUND */
 
 function playClick(){
@@ -1264,6 +1377,15 @@ document.getElementById('second')
 
 },1000);
 
+/* OPTIMASI MOBILE */
+
+if(window.innerWidth < 768){
+
+document.body.classList.add('mobile-device');
+
+ }
+
+
 /* LOADER */
 
 window.addEventListener('load',()=>{
@@ -1273,6 +1395,6 @@ setTimeout(()=>{
 document.getElementById('loader')
 .style.display='none';
 
-},1200);
+},200);
 
 });
