@@ -1,0 +1,1637 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FahriXZ Store</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+  
+<
+<!-- FLASH SALE -->
+
+<section class="flash-sale">
+
+<div class="flash-box">
+
+<div>
+
+<h2>⚡ Flash Sale</h2>
+
+<p>
+Diskon upgrade premium hari ini
+</p>
+
+</div>
+
+<div class="flash-timer">
+
+<div class="flash-time">
+
+<div id="hour">
+00
+</div>
+
+<span>Jam</span>
+
+</div>
+
+<div class="flash-time">
+
+<div id="minute">
+00
+</div>
+
+<span>Menit</span>
+
+</div>
+
+<div class="flash-time">
+
+<div id="second">
+00
+</div>
+
+<span>Detik</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<meta http-equiv="X-UA-Compatible"
+content="IE=edge">
+
+<meta name="theme-color"
+content="#020617">
+
+<meta name="description"
+content="Fahrixz Store Upgrade Premium">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link rel="dns-prefetch"
+href="//fonts.googleapis.com">
+
+<link rel="preload"
+href="style.css"
+as="style">
+
+<link rel="preload"
+href="script.js"
+as="script">
+
+<link rel="icon"
+href="favicon.png">
+
+
+<!-- =========================================
+LIVE VISITOR REALTIME
+========================================= -->
+
+<div class="live-visitor">
+
+👀 <span id="visitorCount">1284</span>
+Orang Online
+
+</div>
+
+<!-- =========================================
+FLOATING SUPPORT
+========================================= -->
+
+<div class="support-floating">
+
+<a href="https://wa.me/6285609949819"
+target="_blank"
+class="support-btn wa">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
+<a href="https://t.me/085609949819"
+target="_blank"
+class="support-btn telegram">
+
+<i class="fab fa-telegram"></i>
+
+</a>
+
+<a href="mailto:fahrixz67@gmail.com"
+class="support-btn email">
+
+<i class="fas fa-envelope"></i>
+
+</a>
+
+</div>
+
+<!-- =========================================
+AUTH SECTION
+========================================= -->
+
+<section class="auth-section">
+
+<div class="auth-box">
+
+<h2>Login User</h2>
+
+<input
+type="email"
+id="loginEmail"
+placeholder="Email">
+
+<input
+type="password"
+id="loginPassword"
+placeholder="Password">
+
+<button onclick="registerUser()">
+Daftar
+</button>
+
+<button onclick="loginUser()">
+Login
+</button>
+
+<button onclick="googleLogin()">
+Login Google
+</button>
+
+</div>
+
+</section>
+
+<!-- =========================================
+NOTIFICATION
+========================================= -->
+
+<div class="realtime-notif"
+id="realtimeNotif">
+
+🔔 Pesanan baru masuk
+
+</div>
+
+<!-- =========================================
+THEME SWITCHER
+========================================= -->
+
+<div class="theme-switcher">
+
+<button onclick="setTheme('dark')">
+Dark
+</button>
+
+<button onclick="setTheme('light')">
+Light
+</button>
+
+<button onclick="setTheme('neon')">
+Neon
+</button>
+
+<button onclick="setTheme('glass')">
+Glass
+</button>
+
+</div>
+
+<!-- =========================================
+USER PROFILE
+========================================= -->
+
+<section class="user-profile">
+
+<h2>Akun Saya</h2>
+
+<div id="userData">
+
+Belum login
+
+</div>
+
+</section>
+
+<!-- =========================================
+DYNAMIC PRODUCTS
+========================================= -->
+
+<section class="dynamic-products">
+
+<h2>Produk Database</h2>
+
+<div class="product-grid"
+id="dynamicProducts">
+
+</div>
+
+</section>
+
+<!-- =========================================
+DYNAMIC BANNER
+========================================= -->
+
+<section class="dynamic-banner">
+
+<div id="bannerContainer">
+
+</div>
+
+</section>
+
+<!-- =========================================
+<!-- =========================================
+TRACK ORDER
+========================================= -->
+
+<section class="track-order">
+
+<h2>Cek Status Pesanan</h2>
+
+<div class="track-box">
+
+<input
+type="text"
+id="trackInput"
+placeholder="Masukkan ID Pesanan">
+
+<button onclick="trackOrder()">
+
+Cek Status
+
+</button>
+
+</div>
+
+<div id="trackResult"></div>
+
+</section>
+
+<!-- =========================================
+UPLOAD PAYMENT
+========================================= -->
+
+<section class="upload-payment">
+
+<h2>Upload Bukti Pembayaran</h2>
+
+<div class="upload-box">
+
+<input
+type="file"
+id="paymentProof">
+
+<button onclick="uploadProof()">
+
+Upload Bukti
+
+</button>
+
+</div>
+
+</section>
+
+<!-- =========================================
+ADMIN PANEL
+========================================= -->
+
+<section class="admin-panel">
+
+<h2>Dashboard Admin</h2>
+
+<div class="admin-grid">
+
+<div class="admin-card">
+
+<h3>Total Order</h3>
+
+<p id="totalOrders">0</p>
+
+</div>
+
+<div class="admin-card">
+
+<h3>Total Produk</h3>
+
+<p id="totalProducts">42</p>
+
+</div>
+
+<div class="admin-card">
+
+<h3>Visitor</h3>
+
+<p id="totalVisitors">1200</p>
+
+</div>
+
+</div>
+
+<div class="admin-products">
+
+<h3>Tambah Produk</h3>
+
+<input
+type="text"
+id="productName"
+placeholder="Nama Produk">
+
+<input
+type="text"
+id="productPrice"
+placeholder
+
+<!-- =========================================
+PROMO TICKER
+========================================= -->
+
+<div class="promo-ticker">
+
+<div class="promo-track">
+
+🔥 Promo Dana Premium •
+⚡ Flash Sale QRIS Merchant •
+👑 Upgrade Premium Termurah •
+🚀 Fast Process 1-5 Menit •
+
+</div>
+
+</div>
+
+<!-- =========================================
+BOTTOM NAVBAR MOBILE
+========================================= -->
+
+<div class="bottom-navbar">
+
+<a href="#home">
+
+<i class="fas fa-home"></i>
+<span>Home</span>
+
+</a>
+
+<a href="#products">
+
+<i class="fas fa-box"></i>
+<span>Produk</span>
+
+</a>
+
+<a href="#promo">
+
+<i class="fas fa-fire"></i>
+<span>Promo</span>
+
+</a>
+
+<a href="https://wa.me/6285609949819">
+
+<i class="fab fa-whatsapp"></i>
+<span>CS</span>
+
+</a>
+
+<a href="#account">
+
+<i class="fas fa-user"></i>
+<span>Akun</span>
+
+</a>
+
+</div>
+
+<!-- =========================================
+VERIFIED BADGE
+========================================= -->
+
+<div class="verified-store">
+
+✔ Verified Store
+
+</div>
+
+<!-- =========================================
+OFFLINE DETECTION
+========================================= -->
+
+<div class="offline-box" id="offlineBox">
+
+⚠ Koneksi internet terputus
+
+</div>
+
+<!-- =========================================
+ORDER TOAST
+========================================= -->
+
+<div class="order-toast" id="orderToast">
+
+✔ Order berhasil dibuat
+
+</div>
+
+<!-- =========================================
+FAKE CHAT SUPPORT
+========================================= -->
+
+<div class="fake-chat">
+
+<div class="dot"></div>
+
+Admin sedang online
+
+</div>
+
+<!-- =========================================
+ESTIMASI PROSES
+========================================= -->
+
+<div class="estimate-box">
+
+⏱ Estimasi proses 5-10 menit
+
+</div>
+
+<!-- =========================================
+PRODUCT BADGE
+========================================= -->
+
+<div class="product-badge hot">
+
+🔥 HOT
+
+</div>
+
+<div class="product-badge premium">
+
+👑 PREMIUM
+
+</div>
+
+<div class="product-badge fast">
+
+⚡ FAST
+
+</div>
+
+<!-- =========================================
+DETAIL POPUP
+========================================= -->
+
+<div class="product-popup"
+id="productPopup">
+
+<div class="popup-content">
+
+<span class="close-popup"
+onclick="closePopup()">
+
+×
+
+</span>
+
+<h2 id="popupTitle">
+
+Dana Premium
+
+</h2>
+
+<p id="popupDesc">
+
+Upgrade premium proses cepat.
+
+</p>
+
+<button onclick="orderWhatsApp('Dana Premium')">
+
+Beli Sekarang
+
+</button>
+
+</div>
+
+</div>
+
+<!-- =========================================
+COPY REKENING
+========================================= -->
+
+<div class="payment-box">
+
+<div class="payment-item">
+
+<span id="danaNumber">
+
+085609949819
+
+</span>
+
+<button onclick="copyText('danaNumber')">
+
+Copy
+
+</button>
+
+</div>
+
+<div class="payment-item">
+
+<span id="bankNumber">
+
+1234567890
+
+</span>
+
+<button onclick="copyText('bankNumber')">
+
+Copy
+
+</button>
+
+</div>
+
+</div>
+
+<!-- =========================================
+FLASH SALE
+========================================= -->
+
+<div class="flash-sale">
+
+🔥 Flash Sale Berakhir Dalam:
+
+<span id="flashHours">01</span> :
+<span id="flashMinutes">25</span> :
+<span id="flashSeconds">45</span>
+
+</div>
+
+<!-- =========================================
+TRENDING PRODUCT
+========================================= -->
+
+<div class="trending-title">
+
+🔥 Produk Trending
+
+</div>
+
+<!-- =========================================
+WISHLIST BUTTON
+========================================= -->
+
+<button class="wishlist-btn"
+onclick="toggleWishlist(this)">
+
+♡ Wishlist
+
+</button>
+
+<!-- =========================================
+REALTIME PURCHASE
+========================================= -->
+
+<div class="live-purchase"
+id="livePurchase">
+
+<img src="logo.png">
+
+<div>
+
+<h4 id="purchaseText">
+
+Rizky membeli Dana Premium
+
+</h4>
+
+<p id="purchaseTime">
+
+1 detik lalu
+
+</p>
+
+</div>
+
+</div>
+
+<!-- =========================================
+SEARCH SUGGESTION
+========================================= -->
+
+<div class="search-box">
+
+<input type="text"
+id="searchInput"
+placeholder="Cari produk..."
+onkeyup="searchSuggestion()">
+
+<div class="search-suggestion"
+id="searchSuggestion">
+
+</div>
+
+</div>
+
+<!-- =========================================
+RATING PRODUCT
+========================================= -->
+
+<div class="product-rating">
+
+⭐ 4.9 (3260 Review)
+
+</div>
+
+<!-- =========================================
+SHARE PRODUCT
+========================================= -->
+
+<button class="share-btn"
+onclick="shareProduct()">
+
+📤 Bagikan Produk
+
+</button>
+
+<!-- TESTIMONI -->
+
+<section class="produk-section">
+
+<div class="section-header">
+
+<h2>
+⭐ 3260+ Testimoni
+</h2>
+
+</div>
+
+<div class="testi-grid">
+
+<div class="testi-card">
+
+<h3>Rizky</h3>
+
+<p>
+Proses cepat banget 🔥
+</p>
+
+</div>
+
+<div class="testi-card">
+
+<h3>Kevin</h3>
+
+<p>
+Trusted dan aman
+</p>
+
+</div>
+
+<div class="testi-card">
+
+<h3>Andi</h3>
+
+<p>
+1 jam langsung selesai
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FAQ -->
+
+<section class="produk-section">
+
+<div class="section-header">
+
+<h2>
+❓ FAQ
+</h2>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-question"
+onclick="toggleFaq(this)">
+
+Apakah aman?
+
+</div>
+
+<div class="faq-answer">
+
+Ya, proses aman dan dikerjakan manual.
+
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-question"
+onclick="toggleFaq(this)">
+
+Berapa lama proses?
+
+</div>
+
+<div class="faq-answer">
+
+Estimasi 1-2 jam.
+
+</div>
+
+</div>
+
+</section>
+
+<!-- BOTTOM NAV -->
+
+<div class="bottom-nav">
+
+<a href="#">
+🏠
+<span>Home</span>
+</a>
+
+<a href="#produk">
+🛒
+<span>Produk</span>
+</a>
+
+<a href="#payment">
+💳
+<span>Bayar</span>
+</a>
+
+<a href="https://wa.me/6285609949819">
+💬
+<span>WhatsApp</span>
+</a>
+
+</div>
+
+<script type="module"
+src="firebase.js"></script>
+
+<body>
+
+<!-- LOADER -->
+
+<div class="loader" id="loader">
+
+<div class="spinner"></div>
+
+</div>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<div class="logo-area">
+
+<!-- GANTI FOTO LOGO -->
+<img src="logo.png" class="logo-img">
+
+<div>
+
+<h2>FahriXz Store</h2>
+
+<p>Jasa Upgrade Aplikasi E-wallet,Bank digital/non digital, PPOB, QRIS, DAN MERCHANT APP</p>
+
+</div>
+
+</div>
+
+<div class="nav-menu">
+
+<a href="#produk">Produk</a>
+<a href="#payment">Pembayaran</a>
+<a href="#channel">Saluran WA</a>
+
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="hero-text">
+
+<h1>
+Jasa Upgrade Premium Aman & Cepat
+</h1>
+
+<p>
+Upgrade e-wallet, bank digital, merchant QRIS dan PPOB dengan proses cepat dan aman.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#produk" class="primary-btn">
+Lihat Produk
+</a>
+
+<a href="https://wa.me/6285609949819"
+class="secondary-btn">
+
+WhatsApp Admin
+
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-banner">
+
+<!-- GANTI FOTO BANNER -->
+<img src="banner.png">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CHANNEL -->
+
+<section class="channel-section" id="channel">
+
+<div class="channel-box">
+
+<div>
+
+<h2>📢 Saluran WhatsApp FahriXZ</h2>
+
+<p>
+Ikuti saluran untuk update produk, promo dan fitur terbaru website.
+</p>
+
+</div>
+
+<a href="https://whatsapp.com/channel/0029VbCe7Ru9WtC0xAMy9K38"join-channel">
+
+Ikuti Saluran
+
+</a>
+
+</div>
+
+</section>
+
+<!-- CATEGORY -->
+
+<div class="category">
+
+<button onclick="filterCategory('all')">
+🔥 Semua
+</button>
+
+<button onclick="filterCategory('ewallet')">
+💳 E-Wallet
+</button>
+
+<button onclick="filterCategory('bank')">
+🏦 Bank Digital
+</button>
+
+<button onclick="filterCategory('qris')">
+⚡ QRIS / PPOB
+</button>
+
+</div>
+
+<!-- SEARCH -->
+
+<section class="search-section">
+
+<input type="text"
+id="searchInput"
+placeholder="Cari produk..."
+onkeyup="searchProduct()">
+
+</section>
+
+<!-- PRODUK -->
+
+<section class="produk-section" id="produk">
+
+<div class="section-header">
+
+<h2>🔥 Produk Populer</h2>
+
+</div>
+
+<div class="product-grid" id="productGrid"></div>
+
+</section>
+
+<!-- PAYMENT -->
+
+<section class="payment-section" id="payment">
+
+<h2>💳 Metode Pembayaran</h2>
+
+<div class="payment-grid">
+
+<div class="payment-card">
+
+<h3>QRIS</h3>
+
+<p>All Payment QRIS</p>
+
+<button onclick="copyText('All Payment QRIS')">
+Copy
+</button>
+
+</div>
+
+<div class="payment-card">
+
+<h3>DANA</h3>
+
+<p>087895917725</p>
+
+<button onclick="copyText('087895917725')">
+Copy
+</button>
+
+</div>
+
+<div class="payment-card">
+
+<h3>Bank Jago</h3>
+
+<p>1234567890</p>
+
+<button onclick="copyText('1234567890')">
+Copy
+</button>
+
+</div>
+
+<div class="payment-card">
+
+<h3>HY Bank</h3>
+
+<p>1234567890</p>
+
+<button onclick="copyText('1234567890')">
+Copy
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FLOATING WA -->
+
+<a href="https://wa.me/6285609949819"
+class="floating-wa">
+
+💬
+
+</a>
+
+<!-- TOAST -->
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+
+  <!-- LIVE VISITOR -->
+
+<div class="live-visitor">
+
+👁️ <span id="visitorCount">1284</span> Pengunjung Online
+
+</div>
+
+<!-- LIVE ORDER -->
+
+<div class="live-order" id="liveOrder">
+
+🔥 Rizky membeli Dana Premium
+
+</div>
+
+<!-- PROMO BAR -->
+
+<div class="promo-bar">
+
+🎉 Promo aktif hari ini! Diskon upgrade premium sampai 20%
+
+</div>
+
+<!-- STATUS ADMIN -->
+
+<div class="admin-status">
+
+🟢 Admin Online
+
+</div>
+
+<!-- DETAIL POPUP -->
+
+<div class="product-popup" id="productPopup">
+
+<div class="popup-box">
+
+<span class="close-popup"
+onclick="closePopup()">
+
+✕
+
+</span>
+
+<div id="popupContent"></div>
+
+</div>
+
+</div>
+
+<!-- QRIS POPUP -->
+
+<div class="qris-popup" id="qrisPopup">
+
+<div class="qris-box">
+
+<span class="close-popup"
+onclick="closeQris()">
+
+✕
+
+</span>
+
+<h2>QRIS PAYMENT</h2>
+
+<img src="qris.png" class="qris-img">
+
+<button onclick="copyText('QRIS ALL PAYMENT')">
+
+Copy QRIS
+
+</button>
+
+</div>
+
+</div>
+
+<!-- TESTI SLIDER -->
+
+<section class="produk-section">
+
+<div class="section-header">
+
+<h2>
+⭐ Testimoni Pelanggan
+</h2>
+
+</div>
+
+<div class="testi-slider">
+
+<div class="testi-track">
+
+<div class="testi-card">
+🔥 Trusted banget
+</div>
+
+<div class="testi-card">
+⚡ Cepat dan aman
+</div>
+
+<div class="testi-card">
+💙 Recommended
+</div>
+
+<div class="testi-card">
+👑 Fast respon
+</div>
+
+<div class="testi-card">
+💯 Aman terpercaya
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- COUNTER -->
+
+<section class="produk-section reveal">
+
+<div class="section-header">
+
+<h2>
+📊 Statistik
+</h2>
+
+</div>
+
+<div class="counter-grid">
+
+<div class="counter-card neon-border">
+
+<h1 id="trxCounter">
+12582
+</h1>
+
+<p>Transaksi Berhasil</p>
+
+</div>
+
+<div class="counter-card neon-border">
+
+<h1 id="customerCounter">
+8291
+</h1>
+
+<p>Pelanggan</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PRICE FILTER -->
+
+<div class="price-filter">
+
+<button onclick="filterPrice(35)">
+35K
+</button>
+
+<button onclick="filterPrice(45)">
+45K
+</button>
+
+<button onclick="filterPrice(60)">
+60K
+</button>
+
+<button onclick="filterPrice('all')">
+Semua
+</button>
+
+</div>
+
+<!-- ORDER STATUS -->
+
+<section class="produk-section reveal">
+
+<div class="section-header">
+
+<h2>
+📦 Tracking Pesanan
+</h2>
+
+</div>
+
+<div class="status-box">
+
+<div class="status-item">
+✔ Pembayaran diterima
+</div>
+
+<div class="status-item">
+✔ Verifikasi berhasil
+</div>
+
+<div class="status-item">
+⏳ Sedang diproses
+</div>
+
+<div class="status-item">
+🚀 Upgrade dilakukan
+</div>
+
+<div class="progress">
+
+<div class="progress-fill"></div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- LUCKY SPIN -->
+
+<section class="produk-section reveal">
+
+<div class="section-header">
+
+<h2>
+🎁 Lucky Spin
+</h2>
+
+</div>
+
+<div class="spin-box">
+
+<div class="spin-wheel"
+id="spinWheel">
+
+SPIN
+
+</div>
+
+<button class="spin-btn"
+onclick="spinDiscount()">
+
+Putar Sekarang
+
+</button>
+
+</div>
+
+</section>
+
+<!-- CHAT BUBBLE -->
+
+<div class="chat-bubble"
+id="chatBubble">
+
+“Kak prosesnya cepat banget 🔥”
+
+</div>
+
+<!-- AI CHAT -->
+
+<div class="ai-chat"
+id="aiChat">
+
+<div class="ai-header">
+
+🤖 AI Assistant
+
+</div>
+
+<div class="ai-messages"
+id="aiMessages">
+
+<div>
+Halo 👋
+Ada yang bisa dibantu?
+</div>
+
+</div>
+
+<div class="ai-input">
+
+<input type="text"
+id="aiInput"
+placeholder="Tanyakan sesuatu...">
+
+<button onclick="sendAI()">
+Kirim
+</button>
+
+</div>
+
+</div>
+
+<!-- AI BUTTON -->
+
+<button class="dark-toggle"
+style="bottom:260px"
+onclick="toggleAI()">
+
+🤖
+
+</button>
+
+  <!-- =========================
+PREMIUM BANNER SLIDER
+========================= -->
+
+<section class="hero-slider">
+
+<div class="slider-track" id="sliderTrack">
+
+<div class="slide">
+
+<img src="banner1.jpg" loading="lazy">
+
+</div>
+
+<div class="slide">
+
+<img src="banner2.jpg" loading="lazy">
+
+</div>
+
+<div class="slide">
+
+<img src="banner3.jpg" loading="lazy">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+TRENDING
+========================= -->
+
+<section class="produk-section reveal">
+
+<div class="section-header">
+
+<h2>
+🔥 Trending Hari Ini
+</h2>
+
+</div>
+
+<div class="trending-grid">
+
+<div class="trending-card neon-border">
+
+<span class="trending-badge">
+BEST
+</span>
+
+<h3>Dana Premium</h3>
+
+<p>35K</p>
+
+<button onclick="orderNow('Dana Premium')">
+
+Beli
+
+</button>
+
+</div>
+
+<div class="trending-card neon-border">
+
+<span class="trending-badge">
+HOT
+</span>
+
+<h3>Bank Jago</h3>
+
+<p>60K</p>
+
+<button onclick="orderNow('Bank Jago')">
+
+Beli
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+UPLOAD BUKTI
+========================= -->
+
+<section class="produk-section reveal">
+
+<div class="section-header">
+
+<h2>
+📤 Upload Bukti Transfer
+</h2>
+
+</div>
+
+<div class="upload-box">
+
+<input type="file"
+id="paymentProof"
+accept="image/*">
+
+<img id="previewImage">
+
+<button onclick="sendProof()">
+
+Kirim Bukti
+
+</button>
+
+</div>
+
+</section>
+
+<!-- =========================
+RIWAYAT PESANAN
+========================= -->
+
+<section class="produk-section reveal">
+
+<div class="section-header">
+
+<h2>
+🧾 Riwayat Pesanan
+</h2>
+
+</div>
+
+<div id="historyList">
+
+<p>
+Belum ada pesanan
+</p>
+
+</div>
+
+</section>
+
+<!-- =========================
+VOUCHER
+========================= -->
+
+<section class="produk-section reveal">
+
+<div class="section-header">
+
+<h2>
+🎟 Voucher Diskon
+</h2>
+
+</div>
+
+<div class="voucher-box">
+
+<input type="text"
+id="voucherInput"
+placeholder="Masukkan kode voucher">
+
+<button onclick="applyVoucher()">
+
+Gunakan
+
+</button>
+
+</div>
+
+</section>
+
+<!-- =========================
+FAKE LIVE CHAT
+========================= -->
+
+<div class="fake-live-chat"
+id="fakeLiveChat">
+
+<div class="fake-chat-user">
+
+🧑 “Kak aman gak?”
+
+</div>
+
+<div class="fake-chat-admin">
+
+🤖 Aman kak ✔
+
+</div>
+
+</div>
+
+<!-- =========================
+INSTALL APP
+========================= -->
+
+<button class="install-app"
+id="installBtn">
+
+📲 Install App
+
+</button>
+
+<!-- =========================
+BOTTOM SHEET
+========================= -->
+
+<div class="bottom-sheet"
+id="bottomSheet">
+
+<div class="sheet-bar"></div>
+
+<h2>
+Detail Produk
+</h2>
+
+<div id="sheetContent"></div>
+
+</div>
+
+<!-- =========================
+VERIFIED
+========================= -->
+
+<div class="verified-store">
+
+✔ Official Trusted Store
+
+</div>
+
+
+
+<!-- =========================
+RESPON ADMIN
+========================= -->
+
+<div class="response-time">
+
+⚡ Respon admin < 1 menit
+
+</div>
+
+
+<!-- =========================
+ONLINE 24 JAM
+========================= -->
+
+<div class="online-24">
+
+🟢 Online 24 Jam
+
+</div>
+
+<!-- =========================
+FOLLOWERS
+========================= -->
+
+<div class="followers-box">
+
+📢 4.200 Followers Saluran WhatsApp
+
+</div>
+
+<!-- =========================
+ORDER HARI INI
+========================= -->
+
+<div class="today-order">
+
+🔥 1.284 Order Hari Ini
+
+</div>
+
+<!-- =========================
+FLOATING MENU
+========================= -->
+
+<div class="floating-menu">
+
+<button onclick="window.scrollTo(0,0)">
+
+⬆
+
+</button>
+
+<button onclick="toggleAI()">
+
+🤖
+
+</button>
+
+</div>
+
+<canvas id="particleCanvas"></canvas>
+  
+</body>
+</html>
